@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding-top: 50px;
+}
+.tank{
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 50px;
+    margin-bottom: 100px;
+}
+.water{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background-color: blue;
+    animation: empty 5s ;
+    border-radius: 10px;
+}
+
+/**Draining tank animation**/
+@keyframes empty{
+    0%{
+        height: 100%;
+    }
+   20%{
+       height: 80%;
+   }
+   40%{
+       height: 60%;
+   }
+   60%{
+        height: 40%;
+    }
+   
+}
+
+/**Where water will be drained to**/
+.basin{
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    border:1px solid black;
+    border-top: none;
+    left: 200px;
+    bottom: 0;
+    border-radius: 10px;
+    z-index: -1;
+}
+.b-water{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: blue;
+    animation: fill  2.5s;
+}
+@keyframes fill{
+    0%{
+        height: 0;
+    }
+    50%{
+        height: 50%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+.floor{
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    background-color:blue;
+    opacity: 1;
+    animation: fade 5s;
+}
+@keyframes fade{
+    0%{
+        height: 0;
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+        height: 0;
+    }
+    60%{
+        opacity: 0.5;
+        height:3px;
+    }
+    80%{
+        opacity: 0.75;
+        height:6px;
+    }
+    100%{
+        opacity: 1;
+        height: 10px;
+    }
+}
