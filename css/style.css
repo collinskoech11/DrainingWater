@@ -33,6 +33,9 @@ body{
     background: transparent;
     margin-left:106%;
     margin-top: 0%;
+    
+}
+.animateStream{
     animation: flow 5s;
 }
 @keyframes flow{
@@ -97,6 +100,9 @@ body{
     height: 100%;
     border-radius: 10px;
     background-color: blue;
+    
+}
+.animateBasin{
     animation: fill  2.5s ;
 }
 @keyframes fill{
